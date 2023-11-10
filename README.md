@@ -12,6 +12,8 @@ This project was built using Xcode 15.0.1 on Apple Silicon and tested with iPhon
 
 This project was designed for iPhone, but is also compatible with Mac Catalyst and iPad.
 
+See 'Screenshots' folder for a preview of the app.
+
 
 Requirements
 -----------------------------
