@@ -26,14 +26,18 @@ This is a UIKit application that wraps a significant amount of SwiftUI. I prefer
 
 Files are organized into two folders, `UI` and `API`. 
 
-```API```
+
+API/
+-----------------------------
 The `API` folder contains `TheMealDBHandler.swift`, which manages two crucial tasks:
 - Retrieve data from TheMealDB API
 - Decode data into structs
 
 By decoding the JSON data into structs and not using plain dictionaries, we have a better understanding of the data and can avoid unpredicted null values. It also makes the code much cleaner to read.
 
-```UI```
+
+UI/
+-----------------------------
 The `UI` folder contains all classes that extend UIViewController, as well as their respective SwiftUI Views. 
 
 `MealListViewController` and `MealListView`:
