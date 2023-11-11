@@ -10,6 +10,8 @@ import SwiftUI
 
 class MealListViewController: UIViewController {
     
+    private var didPresentWelcomeAlert = false
+    
     private var mealsListView: MealListView!
     
     @IBOutlet weak var loadingLabel: UILabel!
@@ -29,11 +31,14 @@ class MealListViewController: UIViewController {
         super.viewDidAppear(animated)
         
         /// Present welcome alert
-        let welcomeAlert = FullScreenAlertViewController(title: "Welcome", message: "This \"take home test\" app serves as a demonstration of proficiency with iOS and relevant frameworks.\n\nThank you for taking the time to review my submission, and please reach out if any further information is needed.")
-        welcomeAlert.addAction(FullScreenAlertAction(title: "Continue", action: { _ in
-            welcomeAlert.dismiss(animated: true)
-        }))
-        present(welcomeAlert, animated: true)
+        if !didPresentWelcomeAlert {
+            let welcomeAlert = FullScreenAlertViewController(title: "Welcome", message: "This \"take home test\" app serves as a demonstration of proficiency with iOS and relevant frameworks.\n\nThank you for taking the time to review my submission, and please reach out if any further information is needed.")
+            welcomeAlert.addAction(FullScreenAlertAction(title: "Continue", action: { _ in
+                welcomeAlert.dismiss(animated: true)
+            }))
+            present(welcomeAlert, animated: true)
+            didPresentWelcomeAlert = true
+        }
     }
     
     ///*******************************************************
